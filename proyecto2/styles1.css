@@ -1,0 +1,179 @@
+/* archivo estilos.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que el video esté en el fondo */
+    overflow: hidden;
+}
+
+.video-fondo video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+}
+
+#pantalla-bienvenida { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: black; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 10; 
+    color: white; 
+} 
+
+.mensaje-bienvenida { 
+    text-align: center; 
+}
+
+.fondo1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;   
+    max-width: 1250px; /* Ajusta el tamaño máximo del contenedor */
+    margin: 150px auto;
+    padding: 20px;
+    background-color: rgba(119, 37, 10, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(174, 9, 9, 0);
+    text-align: center;
+}
+
+.columna1, .columna3 {
+    flex: 2; /* Hacen que las columnas 1 y 3 sean más anchas */
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.columna2 {
+    flex: 1; /* Hacen que la columna 2 sea más estrecha */
+    margin: 10px;
+    background-color: rgba(27, 28, 27, 0.648);
+    border-radius: 13px;
+}
+
+.fondo-img-music img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 150px; /* Ancho máximo de la imagen */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.audio-player {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+   
+    
+}
+
+.audio-player audio {
+    width: 100%;
+}
+
+
+
+/*carrusel de imagenes columna1*/
+.carrusel {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .imagenes {
+    display: flex;
+    transition: transform 1s ease;
+  }
+  
+  .imagenes img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+  /*mensaje columna1*/
+.columna1{
+    background-color: rgba(250, 235, 215, 0.553);
+    text-align: center;
+}
+.message-container {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+
+.paragraph {
+    display: none;
+    font-size: 1.2em;
+    text-align: center;
+    
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: drop 1s forwards;
+}
+
+@keyframes drop 
+{ 0% { 
+    opacity: 0; 
+    transform: translateY(-50px);
+ } 
+ 100% { 
+    opacity: 1; 
+    transform: translateY(0); } }
